@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<style>
+.button {
+  background-color: #009874;
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  }
+
+.button3 {border-radius: 7px;
+background-color: #009874;}
+.button4 {border-radius: 7px;
+background-color: red;}
+
+</style>
+
+
+<style>
+
+/* CodePen demo */
+body {
+  background: #2a2a2b;
+  color: #fff;
+  text-align: center;
+  font-family: Arial, Helvetica;
+}
+
+/* Custom dropdown */
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px; /* demo only */
+}
+
+.custom-dropdown select {
+  background-color: #1D4E89;
+  color: #fff;
+  font-size: inherit;
+  padding: .5em;
+  padding-right: 2.5em; 
+  border: 0;
+  margin: 0;
+  border-radius: 7px;
+  text-indent: 0.01px;
+  text-overflow: '';
+  -webkit-appearance: button; /* hide default arrow in chrome OSX */
+}
+
+.custom-dropdown select[disabled] {
+  color: rgba(0,0,0,.3);
+}
+
+.custom-dropdown select[disabled]::after {
+  color: rgba(0,0,0,.1);
+}
+
+.custom-dropdown::before {
+  background-color: rgba(0,0,0,.15);
+}
+
+.custom-dropdown::after {
+  color: rgba(0,0,0,.4);
+}
+
+</style>
+
+
+
+<style> 
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+@media (prefers-color-scheme: light) {
+	
+	body {
+		background-color: #ffffff;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 16px;
+		line-heught: 24px;
+		padding: 10px;
+	}
+	
+	h3 {
+		color: #000000;
+	}
+	
+	label {
+		font-family: 'Open Sans', sans-serif;
+		color: #000000;
+		padding: 10px;
+		style="font-weight:bold"
+	}
+	
+	input{
+		border-radius: 25px;
+		border: none;
+		padding: 10px;
+		text-align: center;
+		height: 12px;
+		background: #ededed;
+		font-family: 'Open Sans', sans-serif
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #2F3435;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 16px;
+		line-heught: 24px;
+		padding: 10px;
+	}
+	
+	h3 {
+		color: #ffffff;
+	}
+	
+	label {
+		font-family: 'Open Sans', sans-serif;
+		color: #ffffff;
+		padding: 10px;
+		style="font-weight:bold"
+	}
+	
+	input {
+		border-radius: 25px;
+		border: 2px;
+		padding: 10px;
+		text-align: center;
+		height: 12px;
+		background: white;
+		font-family: 'Open Sans', sans-serif
+	}
+	
+	select {
+		font-family: 'Open Sans', sans-serif
+	}
+	
+}
+
+</style>
+
+<title>Christie's</title>
+
+</head>
+<body>
+
+	<p>
+        <a href="userLogin.html"><button class="button button4" type="submit" value="Submit">Log out</button></a>
+    </p>
+
+<h3>Add object to the wearehouse</h3>
+<form action="addWarehouse.php" method="post">
+<center>
+    <p>
+        <label for="firstName">Name:</label>
+        <input type="text" name="name" id="firstName">
+    </p>
+	
+    <p>
+        <label for="lastName">Description:</label>
+        <input type="text" name="description" id="lastName">
+    </p>
+	
+	<p>
+        <label for="objectPrice">Price:</label>
+        <input type="text" name="start_price" id="objectPrice">
+    </p>
+	
+	<p>
+        <label for="objectCurrency">Currency:</label>
+        <input type="text" name="currency" id="objectCurrency">
+    </p>
+	
+	<p>
+        <label for="objectCategory">Category:</label>
+        <input type="text" name="category" id="objectCategory">
+    </p>
+	
+	<p>
+        <label for="objectYear">Year:</label>
+        <input type="text" name="year" id="objectYear">
+    </p>
+	
+	<label for="cars">Where the object is located:</label>
+	
+<span class="custom-dropdown">
+	<select name="taskOption">
+		<option value="Amsterdam">Amsterdam</option>
+		<option value="Dubai">Dubai</option>
+		<option value="Geneva">Geneva</option>
+		<option value="Hong Kong">Hong Kong</option>
+		<option value="London">London</option>
+		<option value="Milan">Milan</option>
+		<option value="	New York">New York</option>
+		<option value="Paris">Paris</option>
+		<option value="Shanghai">Shanghai</option>
+		<option value="Zürich">Zürich</option>
+	</select>
+	</span>
+	</center>
+	
+		<center>
+			<button class="button button3" type="submit" value="Submit">Submit</button>
+		</center>
+</form>
+
+
+</body>
+</html>
